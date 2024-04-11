@@ -1,0 +1,36 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title":"Meu novo evento",
+    "details": null,
+    "maximumAttendees":1
+}
+
+###
+
+POST http://localhost:3333/events/3ff93f62-5e79-445b-8cbc-ca14c544895f/attendees
+Content-Type: application/json
+
+{
+"name" : "Vitória Luiza Soares de Almeida",
+"email": "vitoriadev@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/3ff93f62-5e79-445b-8cbc-ca14c544895f
+
+
+###
+
+
+GET http://localhost:3333/attendees/1/badge
+
+
+###
+GET http://localhost:3333/attendees/1/check-in
+
+
+### 
+GET http://localhost:3333/events/3ff93f62-5e79-445b-8cbc-ca14c544895f/attendees?query=vitória
